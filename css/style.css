@@ -3,6 +3,18 @@
   padding: 2rem 0;
 }
 
+/* Mobile/Tablet only: Hero content overflow fixes */
+@media (max-width: 991.98px) {
+  .hero-content {
+    max-width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding-left: 15px; /* Move content slightly to the right for better centering */
+  }
+}
+
 .hero-title {
   font-size: 4rem;
   font-weight: 900;
@@ -11,6 +23,10 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .hero-subtitle {
@@ -20,6 +36,10 @@
   margin-bottom: 1.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   letter-spacing: 0.05em;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .hero-divider {
@@ -38,6 +58,10 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .hero-cta {
@@ -434,6 +458,10 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .business-details {
@@ -651,38 +679,66 @@
 @media (max-width: 767.98px) {
   .hero-title {
     font-size: 2.5rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .hero-subtitle {
     font-size: 1.3rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .hero-tagline {
     font-size: 1.1rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .hero-btn {
     padding: 12px 30px;
     font-size: 1.1rem;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 }
 
 @media (max-width: 575.98px) {
   .hero-title {
     font-size: 2rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .hero-subtitle {
     font-size: 1.1rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .hero-tagline {
     font-size: 1rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .hero-btn {
     padding: 10px 25px;
     font-size: 1rem;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 }
 
@@ -692,6 +748,105 @@ body {
   color: gray;
   font-weight: 400;
   font-size: 1rem; }
+
+/* Mobile/Tablet only: Prevent horizontal overflow */
+@media (max-width: 991.98px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Ensure all containers respect viewport width on mobile/tablet */
+  .container, .container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Prevent long text from causing horizontal overflow on mobile/tablet */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+
+  /* Specific fixes for hero section container on mobile/tablet */
+  .site-blocks-cover .container {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-left: 25px; /* Add some left padding for better centering */
+    padding-right: 15px;
+  }
+
+  .site-blocks-cover .row {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-blocks-cover .col-md-8 {
+    max-width: 100%;
+    overflow-x: hidden;
+    text-align: center; /* Ensure text is centered */
+  }
+
+  /* Additional container fixes for all sections on mobile/tablet */
+  .marci-section .container,
+  .get-it-sold-section .container,
+  .dream-home-section .container,
+  .partners-section .container,
+  .gallery-section .container,
+  .services-section .container,
+  .contact-section .container,
+  .map-section .container {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-left: 25px; /* Add left padding for better centering */
+    padding-right: 15px;
+  }
+
+  .marci-section .row,
+  .get-it-sold-section .row,
+  .dream-home-section .row,
+  .partners-section .row,
+  .gallery-section .row,
+  .services-section .row,
+  .contact-section .row,
+  .map-section .row {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Center content for all sections on mobile/tablet */
+  .marci-section .container > *,
+  .get-it-sold-section .container > *,
+  .dream-home-section .container > *,
+  .partners-section .container > *,
+  .gallery-section .container > *,
+  .services-section .container > *,
+  .contact-section .container > *,
+  .map-section .container > * {
+    text-align: center;
+  }
+
+  /* Center text content in all sections */
+  .marci-section,
+  .get-it-sold-section,
+  .dream-home-section,
+  .partners-section,
+  .gallery-section,
+  .services-section,
+  .contact-section,
+  .map-section {
+    text-align: center;
+  }
+
+  /* Ensure all column classes respect viewport width on mobile/tablet */
+  [class*="col-"] {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
 
 ::-moz-selection {
   background: #000;
@@ -727,6 +882,14 @@ h1, h2, h3, h4, h5,
 .color-white-opacity-5 {
   color: rgba(255, 255, 255, 0.5); }
 
+/* Mobile/Tablet only: Prevent site-wrap overflow */
+@media (max-width: 991.98px) {
+  .site-wrap {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}
+
 .site-wrap:before {
   display: none;
   -webkit-transition: .3s all ease-in-out;
@@ -750,6 +913,14 @@ h1, h2, h3, h4, h5,
   .offcanvas-menu .site-wrap:before {
     opacity: 1;
     visibility: visible; }
+
+/* Prevent body scrolling when mobile menu is active */
+.offcanvas-menu {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
 
 .btn {
   font-size: 16px;
@@ -975,6 +1146,10 @@ h1, h2, h3, h4, h5,
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: nameSlideIn 1s ease-out;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 @keyframes nameSlideIn {
@@ -1268,34 +1443,47 @@ h1, h2, h3, h4, h5,
 @media (max-width: 767.98px) {
   .marci-name {
     font-size: 2rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
   
   .phone-link {
     font-size: 1.2rem;
     padding: 0.8rem 1.5rem;
+    max-width: 100%;
+    word-wrap: break-word;
   }
   
   .stat-number {
     font-size: 2rem;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   
   .marci-stats {
     gap: 1rem;
+    max-width: 100%;
   }
   
   .image-3d-wrapper {
     width: 250px;
     height: 250px;
+    max-width: 100%;
   }
   
   .circle-background {
     width: 200px;
     height: 200px;
+    max-width: 100%;
   }
   
   .image-frame {
     width: 160px;
     height: 160px;
+    max-width: 100%;
   }
 }
 
@@ -3691,6 +3879,10 @@ html {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.3px;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 .separator {
