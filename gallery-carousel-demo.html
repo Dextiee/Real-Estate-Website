@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery Carousel - Demo</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Playfair+Display:400,700,900" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/gallery.css">
+    
+    <style>
+        /* Demo-specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .demo-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .demo-content {
+            margin-top: 80px;
+        }
+        
+        .demo-footer {
+            background: #34495e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .demo-footer a {
+            color: #f69314;
+            text-decoration: none;
+        }
+        
+        .demo-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .placeholder-image {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+            flex-direction: column;
+        }
+        
+        .placeholder-image::before {
+            content: '📷';
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>Photo Gallery Carousel - Demo</h1>
+        <p>Single image carousel with auto-play and manual controls</p>
+    </div>
+    
+    <div class="demo-content">
+        <!-- PHOTO GALLERY Section -->
+        <section class="gallery-section" id="gallery-section">
+            <div class="gallery-container">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="gallery-header">
+                        <h2 class="gallery-title">Photo Gallery</h2>
+                        <p class="gallery-subtitle">Our Work in Pictures</p>
+                        <p class="gallery-description">
+                            Explore our portfolio of successful real estate projects and beautiful properties that showcase our expertise and attention to detail.
+                        </p>
+                    </div>
+
+                    <!-- Gallery Carousel -->
+                    <div class="gallery-carousel">
+                        <button class="gallery-nav gallery-prev" aria-label="Previous image">‹</button>
+                        <button class="gallery-nav gallery-next" aria-label="Next image">›</button>
+                        
+                        <div class="gallery-slide">
+                            <div class="placeholder-image">
+                                <div>pic1.webp</div>
+                                <small>Beautiful Modern Home</small>
+                            </div>
+                            <div class="gallery-overlay">
+                                <div class="gallery-overlay-content">
+                                    <h3 class="gallery-item-title">Modern Residence</h3>
+                                    <p class="gallery-item-subtitle">Contemporary Design</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-dots"></div>
+                        
+                        <div class="gallery-controls">
+                            <button class="gallery-play-btn">Pause</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="gallery-floating">
+                    <div class="floating-element element-1"></div>
+                    <div class="floating-element element-2"></div>
+                    <div class="floating-element element-3"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+            <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+            <div class="placeholder-image" style="max-width: 80vw; max-height: 80vh; background: #f8f9fa; border: 2px solid #dee2e6;">
+                <div style="font-size: 1.2rem; margin-bottom: 1rem;">📷</div>
+                <div>Lightbox Image</div>
+                <small>Click outside or press ESC to close</small>
+            </div>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title">Gallery Image</h3>
+                <p class="lightbox-counter">1 of 7</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="demo-footer">
+        <h3>Demo Features</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ Single image carousel with auto-play (4s intervals)</li>
+            <li>✅ Manual navigation with arrow buttons</li>
+            <li>✅ Dot indicators for direct navigation</li>
+            <li>✅ Play/Pause controls</li>
+            <li>✅ Click to open lightbox</li>
+            <li>✅ Touch gestures for mobile</li>
+            <li>✅ Keyboard navigation (Arrow keys, ESC)</li>
+            <li>✅ Dark background to separate from other sections</li>
+            <li>✅ Orange color scheme matching website theme</li>
+        </ul>
+        <p><strong>Instructions:</strong> Replace placeholder div with actual images (pic1.webp to pic7.webp)</p>
+        <p><strong>Controls:</strong> Auto-play every 4 seconds, click arrows or dots to navigate, click image for lightbox</p>
+        <p><a href="index.html">← Back to Main Site</a></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/gallery.js"></script>
+</body>
+</html>

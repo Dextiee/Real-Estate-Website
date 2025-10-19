@@ -245,11 +245,16 @@ jQuery(document).ready(function($) {
 	};
 	siteSticky();
 
-	// navigation
+  // navigation
   var OnePageNavigation = function() {
     var navToggler = $('.site-menu-toggle');
    	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
       e.preventDefault();
+
+      // Prevent disabled nav items from doing anything
+      if ($(this).hasClass('nav-disabled')) {
+        return false;
+      }
 
       var hash = this.hash;
 
@@ -281,5 +286,71 @@ jQuery(document).ready(function($) {
 
   };
   siteScroll();
+
+  // Office Hours Dropdown Functionality
+  function initializeOfficeHours() {
+    const dropdownBtn = document.getElementById('hoursDropdownBtn');
+    const dropdownContent = document.getElementById('hoursDropdown');
+    const weeklySchedule = document.getElementById('weeklySchedule');
+    
+    if (!dropdownBtn || !dropdownContent || !weeklySchedule) return;
+    
+    // Define weekly schedule (starting with Sunday since getDay() returns 0 for Sunday)
+    const weekDays = [
+      { name: 'Sun', hours: '08:00 am – 07:00 pm' },
+      { name: 'Mon', hours: '08:00 am – 07:00 pm' },
+      { name: 'Tue', hours: '08:00 am – 07:00 pm' },
+      { name: 'Wed', hours: '08:00 am – 07:00 pm' },
+      { name: 'Thu', hours: '08:00 am – 07:00 pm' },
+      { name: 'Fri', hours: '08:00 am – 07:00 pm' },
+      { name: 'Sat', hours: '08:00 am – 07:00 pm' }
+    ];
+    
+    // Get today's day (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+    const today = new Date().getDay();
+    
+    // Generate HTML for weekly schedule
+    let scheduleHTML = '';
+    weekDays.forEach((day, index) => {
+      const isToday = index === today;
+      const dayClass = isToday ? 'day-item today' : 'day-item';
+      
+      scheduleHTML += `
+        <div class="${dayClass}">
+          <div class="day-name">${day.name}</div>
+          <div class="day-hours">${day.hours}</div>
+        </div>
+      `;
+    });
+    
+    weeklySchedule.innerHTML = scheduleHTML;
+    
+    // Toggle dropdown
+    dropdownBtn.addEventListener('click', function() {
+      const isOpen = dropdownContent.classList.contains('show');
+      
+      if (isOpen) {
+        dropdownContent.classList.remove('show');
+        dropdownBtn.querySelector('.dropdown-arrow').textContent = '▼';
+        dropdownBtn.querySelector('.dropdown-text').textContent = 'View Weekly Schedule';
+      } else {
+        dropdownContent.classList.add('show');
+        dropdownBtn.querySelector('.dropdown-arrow').textContent = '▲';
+        dropdownBtn.querySelector('.dropdown-text').textContent = 'Hide Weekly Schedule';
+      }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!dropdownBtn.contains(event.target) && !dropdownContent.contains(event.target)) {
+        dropdownContent.classList.remove('show');
+        dropdownBtn.querySelector('.dropdown-arrow').textContent = '▼';
+        dropdownBtn.querySelector('.dropdown-text').textContent = 'View Weekly Schedule';
+      }
+    });
+  }
+  
+  // Initialize office hours when DOM is ready
+  initializeOfficeHours();
 
 });

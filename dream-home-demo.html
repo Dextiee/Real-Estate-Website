@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dream Home - Demo</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Playfair+Display:400,700,900" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dream-home.css">
+    
+    <style>
+        /* Demo-specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .demo-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .demo-content {
+            margin-top: 80px;
+            height: calc(100vh - 80px);
+            overflow: hidden;
+        }
+        
+        .demo-footer {
+            background: #34495e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .demo-footer a {
+            color: #f69314;
+            text-decoration: none;
+        }
+        
+        .demo-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>Find Your Dream Home - Demo</h1>
+        <p>Interactive search form with modern design and animations</p>
+    </div>
+    
+    <div class="demo-content">
+        <!-- FIND YOUR DREAM HOME Section -->
+        <section class="dream-home-section" id="dream-home-section">
+            <div class="dream-home-container">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="dream-home-header">
+                        <h2 class="dream-home-title">Find Your Dream Home</h2>
+                        <p class="dream-home-subtitle">Discover Your Perfect Property</p>
+                        <p class="dream-home-description">
+                            Search through our extensive collection of premium properties and find the home that matches your lifestyle and budget.
+                        </p>
+                    </div>
+
+                    <!-- Search Form -->
+                    <div class="search-form-container">
+                        <div class="search-form-header">
+                            <h3 class="search-form-title">Search Listings</h3>
+                            <p class="search-form-subtitle">Filter properties by your preferences</p>
+                        </div>
+
+                        <form class="dream-home-form" id="property-search-form">
+                            <!-- Location -->
+                            <div class="form-group">
+                                <label for="location" class="form-label">Location</label>
+                                <select id="location" name="location" class="form-control" required>
+                                    <option value="">Select Location</option>
+                                    <option value="downtown">Downtown</option>
+                                    <option value="suburbs">Suburbs</option>
+                                    <option value="waterfront">Waterfront</option>
+                                    <option value="mountains">Mountains</option>
+                                    <option value="countryside">Countryside</option>
+                                </select>
+                            </div>
+
+                            <!-- Type -->
+                            <div class="form-group">
+                                <label for="type" class="form-label">Type</label>
+                                <select id="type" name="type" class="form-control" required>
+                                    <option value="">Select Type</option>
+                                    <option value="house">House</option>
+                                    <option value="condo">Condo</option>
+                                    <option value="townhouse">Townhouse</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="land">Land</option>
+                                </select>
+                            </div>
+
+                            <!-- Sort By -->
+                            <div class="form-group">
+                                <label for="sort" class="form-label">Sort By</label>
+                                <select id="sort" name="sort" class="form-control">
+                                    <option value="price-low">Price: Low to High</option>
+                                    <option value="price-high">Price: High to Low</option>
+                                    <option value="newest">Newest First</option>
+                                    <option value="oldest">Oldest First</option>
+                                    <option value="size">Size</option>
+                                </select>
+                            </div>
+
+                            <!-- Bedrooms -->
+                            <div class="form-group">
+                                <label for="bedrooms" class="form-label">Bedrooms</label>
+                                <select id="bedrooms" name="bedrooms" class="form-control">
+                                    <option value="">Any Number</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+
+                            <!-- Baths -->
+                            <div class="form-group">
+                                <label for="baths" class="form-label">Baths</label>
+                                <select id="baths" name="baths" class="form-control">
+                                    <option value="">Any Number</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                </select>
+                            </div>
+
+                            <!-- Price Range -->
+                            <div class="form-group price-range-container">
+                                <div>
+                                    <label for="min-price" class="form-label">Min Price</label>
+                                    <input type="number" id="min-price" name="min_price" class="form-control" placeholder="Min Price" min="0">
+                                </div>
+                                <div>
+                                    <label for="max-price" class="form-label">Max Price</label>
+                                    <input type="number" id="max-price" name="max_price" class="form-control" placeholder="Max Price" min="0">
+                                </div>
+                            </div>
+
+                            <!-- Search Button -->
+                            <div class="search-button-container">
+                                <button type="submit" class="search-btn">
+                                    <span class="search-btn-icon">🔍</span>
+                                    Search Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="floating-elements">
+                    <div class="floating-element element-1"></div>
+                    <div class="floating-element element-2"></div>
+                    <div class="floating-element element-3"></div>
+                    <div class="floating-element element-4"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="demo-footer">
+        <h3>Demo Features</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ Responsive design for all devices</li>
+            <li>✅ Smooth animations and transitions</li>
+            <li>✅ Form validation and error handling</li>
+            <li>✅ Interactive search with loading states</li>
+            <li>✅ Modern glassmorphism design</li>
+            <li>✅ Accessibility features</li>
+        </ul>
+        <p><a href="index.html">← Back to Main Site</a></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/dream-home.js"></script>
+</body>
+</html>

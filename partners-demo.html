@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supporting Partners - Demo</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Playfair+Display:400,700,900" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/partners.css">
+    
+    <style>
+        /* Demo-specific styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .demo-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .demo-content {
+            margin-top: 80px;
+        }
+        
+        .demo-footer {
+            background: #34495e;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .demo-footer a {
+            color: #f69314;
+            text-decoration: none;
+        }
+        
+        .demo-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .placeholder-logo {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>Supporting Partners - Demo</h1>
+        <p>Professional partner showcase with interactive logos</p>
+    </div>
+    
+    <div class="demo-content">
+        <!-- SUPPORTING PARTNERS Section -->
+        <section class="partners-section" id="partners-section">
+            <div class="partners-container">
+                <div class="container">
+                    <!-- Section Header -->
+                    <div class="partners-header">
+                        <h2 class="partners-title">Trusted Partners</h2>
+                        <p class="partners-subtitle">Supporting Our Mission</p>
+                        <p class="partners-description">
+                            We're proud to work with industry leaders and trusted organizations that share our commitment to excellence in real estate.
+                        </p>
+                    </div>
+
+                    <!-- Partners Grid -->
+                    <div class="partners-grid">
+                        <div class="partner-logo">
+                            <div class="placeholder-logo">Icon 1<br><small>icon1.webp</small></div>
+                            <span class="partner-name">Partner 1</span>
+                        </div>
+                        <div class="partner-logo">
+                            <div class="placeholder-logo">Icon 2<br><small>icon2.webp</small></div>
+                            <span class="partner-name">Partner 2</span>
+                        </div>
+                        <div class="partner-logo">
+                            <div class="placeholder-logo">Icon 3<br><small>icon3.webp</small></div>
+                            <span class="partner-name">Partner 3</span>
+                        </div>
+                        <div class="partner-logo">
+                            <div class="placeholder-logo">Icon 4<br><small>icon4.webp</small></div>
+                            <span class="partner-name">Partner 4</span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Carousel (Hidden by default, shown on mobile) -->
+                    <div class="partners-carousel">
+                        <div class="partners-track">
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 1</div>
+                            </div>
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 2</div>
+                            </div>
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 3</div>
+                            </div>
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 4</div>
+                            </div>
+                            <!-- Duplicate for seamless loop -->
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 1</div>
+                            </div>
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 2</div>
+                            </div>
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 3</div>
+                            </div>
+                            <div class="partner-logo">
+                                <div class="placeholder-logo">Icon 4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="partners-floating">
+                    <div class="floating-shape shape-1"></div>
+                    <div class="floating-shape shape-2"></div>
+                    <div class="floating-shape shape-3"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="demo-footer">
+        <h3>Demo Features</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li>✅ Responsive grid layout (4 columns → 2 → 1)</li>
+            <li>✅ Hover animations with ripple effects</li>
+            <li>✅ Mobile carousel with touch support</li>
+            <li>✅ Lazy loading for performance</li>
+            <li>✅ Accessibility features (keyboard navigation)</li>
+            <li>✅ Professional glassmorphism design</li>
+            <li>✅ Analytics tracking ready</li>
+        </ul>
+        <p><strong>Instructions:</strong> Replace placeholder divs with actual logo images (icon1.webp to icon4.webp)</p>
+        <p><a href="index.html">← Back to Main Site</a></p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/partners.js"></script>
+</body>
+</html>

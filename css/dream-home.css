@@ -1,0 +1,804 @@
+/* Find Your Dream Home Section Styles */
+.dream-home-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+              url('https://img1.wsimg.com/isteam/stock/143/:/rs=w:1920,m') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dream-home-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(246, 147, 20, 0.1) 0%, 
+    rgba(0, 0, 0, 0.7) 50%, 
+    rgba(232, 134, 9, 0.1) 100%);
+  z-index: 1;
+}
+
+.dream-home-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Section Header */
+.dream-home-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.dream-home-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.dream-home-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #f69314, #fff, #f69314);
+  border-radius: 2px;
+  animation: expandLine 1.5s ease-out 0.5s both;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+.dream-home-subtitle {
+  font-size: 1.5rem;
+  color: #f69314;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.05em;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.dream-home-description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+/* Search Form Container */
+.search-form-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 1s ease-out 0.8s both;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.search-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f69314, #e88609, #f69314);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Form Header */
+.search-form-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.search-form-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+/* Search Form */
+.dream-home-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.form-group:focus-within .form-label {
+  color: #f69314;
+  transform: translateX(2px);
+  text-shadow: 0 2px 4px rgba(246, 147, 20, 0.1);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 8px;
+}
+
+.form-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0%;
+  background: linear-gradient(180deg, #f69314, #e88609);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.form-group:focus-within .form-label::before {
+  height: 100%;
+}
+
+.form-control {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2c3e50;
+  background: #fff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #f69314;
+  box-shadow: 
+    0 4px 12px rgba(246, 147, 20, 0.15),
+    0 0 0 3px rgba(246, 147, 20, 0.1);
+  transform: translateY(-2px);
+  background-color: #fff;
+}
+
+.form-control:hover {
+  border-color: #f69314;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(246, 147, 20, 0.1);
+}
+
+/* Input specific styling */
+input.form-control {
+  background: #fff;
+}
+
+input.form-control:focus {
+  background: #fff;
+}
+
+input.form-control::placeholder {
+  color: #95a5a6;
+  font-weight: 400;
+  opacity: 1;
+}
+
+/* Select Dropdown Styling */
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f69314' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 18px) center;
+  background-size: 18px;
+  padding-right: 50px;
+  line-height: normal;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  min-height: 52px;
+  background-clip: padding-box;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, background-image 0.3s ease;
+  z-index: 3;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Prevent vertical shift on selects which can clip text and cause glitching */
+select.form-control:focus,
+select.form-control:hover {
+  transform: none;
+  border-color: #f69314;
+  background-color: #fff;
+  box-shadow: 
+    0 4px 12px rgba(246, 147, 20, 0.15),
+    0 0 0 3px rgba(246, 147, 20, 0.1);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e88609' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* Active/Open state */
+select.form-control:active {
+  border-color: #e88609;
+  box-shadow: 
+    0 2px 8px rgba(246, 147, 20, 0.2),
+    0 0 0 3px rgba(246, 147, 20, 0.15);
+}
+
+/* Option styling (limited browser support but adds polish where available) */
+select.form-control option {
+  padding: 12px 15px;
+  background-color: #fff;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+select.form-control option:hover {
+  background-color: rgba(246, 147, 20, 0.1);
+}
+
+select.form-control option:checked {
+  background-color: #f0f0f0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Dropdown icon wrapper - creates a visual button effect */
+.form-group:has(select) {
+  position: relative;
+}
+
+.form-group:has(select)::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, rgba(246, 147, 20, 0.1), rgba(246, 147, 20, 0.05));
+  border-radius: 8px;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  border: 1px solid rgba(246, 147, 20, 0.15);
+}
+
+.form-group:has(select:hover)::after {
+  background: linear-gradient(135deg, rgba(246, 147, 20, 0.18), rgba(246, 147, 20, 0.1));
+  border-color: rgba(246, 147, 20, 0.3);
+  box-shadow: 0 2px 8px rgba(246, 147, 20, 0.2);
+}
+
+/* Remove the ::after element when dropdown is focused or active to prevent glitching */
+.form-group:has(select:focus)::after,
+.form-group:has(select:active)::after {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Price Range Container */
+.price-range-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Search Button */
+.search-button-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #f69314, #e88609);
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(246, 147, 20, 0.4);
+  min-width: 180px;
+}
+
+.search-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.search-btn:hover::before {
+  left: 100%;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #e88609, #d67a08);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(246, 147, 20, 0.6);
+}
+
+.search-btn:active {
+  transform: translateY(-1px);
+}
+
+.search-btn-icon {
+  margin-right: 10px;
+  font-size: 1.1em;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-element {
+  position: absolute;
+  background: rgba(246, 147, 20, 0.1);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.element-1 {
+  width: 30px;
+  height: 30px;
+  top: 20%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.element-2 {
+  width: 20px;
+  height: 20px;
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+.element-3 {
+  width: 25px;
+  height: 25px;
+  top: 60%;
+  right: 20%;
+  animation-delay: 4s;
+}
+
+.element-4 {
+  width: 15px;
+  height: 15px;
+  bottom: 20%;
+  right: 30%;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Form Validation States */
+.form-control.error {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.form-control.success {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+/* Loading State */
+.search-btn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.search-btn.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .dream-home-title {
+    font-size: 3rem;
+  }
+  
+  .search-form-container {
+    padding: 1.5rem;
+    max-height: 75vh;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .dream-home-section {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding: 1.25rem 0;
+  }
+  
+  .dream-home-title {
+    font-size: 2.5rem;
+  }
+  
+  .dream-home-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dream-home-description {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-form-container {
+    padding: 1.25rem;
+    margin: 0 1rem;
+    max-height: none;
+  }
+  
+  .dream-home-header {
+    margin-bottom: 1rem;
+  }
+  
+  .dream-home-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  
+  /* Default all fields to full width on tablet/mobile */
+  .dream-home-form .form-group {
+    grid-column: 1 / -1;
+  }
+  
+  /* Make Bedrooms and Baths share the same row */
+  .dream-home-form .form-group.half,
+  .dream-home-form .form-group:has(#bedrooms),
+  .dream-home-form .form-group:has(#baths) {
+    grid-column: auto;
+  }
+  
+  .price-range-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-label {
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-control {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  select.form-control {
+    min-height: 46px;
+  }
+
+  .search-form-header {
+    margin-bottom: 0.8rem;
+  }
+  
+  .search-form-title {
+    font-size: 1.6rem;
+  }
+  
+  .search-form-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .search-button-container {
+    margin-top: 0.25rem;
+  }
+  
+  .search-btn {
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .dream-home-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 1rem 0;
+    overflow: visible;
+  }
+  
+  .dream-home-title {
+    font-size: 2.2rem;
+  }
+  
+  .dream-home-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .dream-home-description {
+    display: none;
+  }
+  
+  .search-form-container {
+    padding: 1rem;
+    margin: 0 0.5rem;
+    max-height: none;
+  }
+  
+  .dream-home-header {
+    margin-bottom: 0.6rem;
+  }
+  
+  .dream-home-form {
+    gap: 0.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 0.4rem;
+  }
+  
+  .form-label {
+    margin-bottom: 0.2rem;
+  }
+  
+  .form-control {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  select.form-control {
+    min-height: 44px;
+  }
+  
+  .search-form-title {
+    font-size: 1.5rem;
+  }
+  
+  .search-btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dream-home-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .dream-home-subtitle {
+    font-size: 1rem;
+  }
+  
+  .dream-home-description {
+    font-size: 0.85rem;
+  }
+  
+  .search-form-container {
+    padding: 0.8rem;
+    margin: 0 0.3rem;
+    max-height: none;
+  }
+  
+  .dream-home-header {
+    margin-bottom: 0.6rem;
+  }
+  
+  .dream-home-form {
+    gap: 0.4rem;
+  }
+  
+  .form-group {
+    margin-bottom: 0.35rem;
+  }
+  
+  .form-label {
+    margin-bottom: 0.2rem;
+  }
+  
+  .search-form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-control {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .search-btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+    min-width: 150px;
+  }
+
+  /* Keep price range fields on the same row on phones */
+  .price-range-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .dream-home-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), 
+                url('https://img1.wsimg.com/isteam/stock/143/:/rs=w:1920,m') center/cover no-repeat;
+  }
+  
+  .search-form-container {
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid #000;
+  }
+  
+  .form-control {
+    border: 2px solid #000;
+  }
+  
+  .form-control:focus {
+    border-color: #f69314;
+    box-shadow: 0 0 0 3px rgba(246, 147, 20, 0.3);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .dream-home-title::after,
+  .floating-element,
+  .search-btn-icon,
+  .search-btn::before {
+    animation: none;
+  }
+  
+  .search-btn:hover,
+  .form-control:hover,
+  .form-control:focus {
+    transform: none;
+  }
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>States &mdash; Website by Colorlib</title>
+    <title>Marci Metzger Homes - Real Estate Agent, Real Estate, Realtor</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -21,11 +21,17 @@
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 
     <link rel="stylesheet" href="css/aos.css">
+    
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dream-home.css">
+    <link rel="stylesheet" href="css/partners.css">
+    <link rel="stylesheet" href="css/gallery.css">
     
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <body>
   
   <div class="site-wrap">
 
@@ -35,7 +41,14 @@
           <span class="icon-close2 js-menu-toggle"></span>
         </div>
       </div>
-      <div class="site-mobile-menu-body"></div>
+      <div class="site-mobile-menu-body">
+        <!-- Navigation will be populated by JavaScript -->
+        
+        <!-- Copyright -->
+        <div class="mobile-menu-copyright">
+          <p>&copy; 2023 Marci Metzger - The Ridge Realty Group. All rights reserved.</p>
+        </div>
+      </div>
     </div>
    
     
@@ -52,18 +65,16 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#properties-section" class="nav-link">Properties</a></li>
-                <li><a href="#agents-section" class="nav-link">Agents</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#news-section" class="nav-link">News</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                <li class="active"><a href="#home-section" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link nav-disabled">Listings</a></li>
+                <li><a href="#" class="nav-link nav-disabled">Let's Move</a></li>
+                <li><a href="#" class="nav-link nav-disabled">About Us</a></li>
               </ul>
             </nav>
           </div>
 
 
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
 
         </div>
       </div>
@@ -94,18 +105,40 @@
         </div>
       </div>
 
-      <a href="#howitworks-section" class="smoothscroll arrow-down"><span class="icon-arrow_downward"></span></a>
+      <a href="#about-section" class="smoothscroll arrow-down"><span class="icon-arrow_downward"></span></a>
     </div>  
 
     <!-- Marci Metzger Section -->
-    <section class="marci-section py-5" id="marci-section">
+    <section class="marci-section py-5" id="about-section">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="marci-content" data-aos="fade-right">
-              <div class="marci-badge">
-                <span class="badge-text">REALTOR FOR NEARLY 3 DECADES!</span>
+          <!-- Badge - Always shows first -->
+          <div class="col-12 order-1">
+            <div class="marci-badge" data-aos="fade-up">
+              <span class="badge-text">REALTOR FOR NEARLY 3 DECADES!</span>
+            </div>
+          </div>
+          
+          <!-- Image - Shows second on mobile, third on desktop -->
+          <div class="col-lg-6 order-2 order-lg-3">
+            <div class="marci-image-container" data-aos="fade-left">
+              <div class="image-3d-wrapper">
+                <div class="circle-background"></div>
+                <div class="image-frame">
+                  <img src="images/Owner.webp" alt="Marci Metzger" class="marci-image">
+                </div>
+                <div class="floating-elements">
+                  <div class="floating-element element-1"></div>
+                  <div class="floating-element element-2"></div>
+                  <div class="floating-element element-3"></div>
+                </div>
               </div>
+            </div>
+          </div>
+          
+          <!-- Content - Shows third on mobile, second on desktop -->
+          <div class="col-lg-6 order-3 order-lg-2">
+            <div class="marci-content" data-aos="fade-right">
               <h1 class="marci-name">MARCI METZGER</h1>
               <div class="marci-divider"></div>
               <div class="marci-phone">
@@ -119,31 +152,16 @@
               </div>
               <div class="marci-stats">
                 <div class="stat-item">
-                  <span class="stat-number">30+</span>
+                  <span class="stat-number">20+</span>
                   <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">500+</span>
+                  <span class="stat-number">90+</span>
                   <span class="stat-label">Happy Clients</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">$50M+</span>
+                  <span class="stat-number">$28.5M+</span>
                   <span class="stat-label">Sales Volume</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="marci-image-container" data-aos="fade-left">
-              <div class="image-3d-wrapper">
-                <div class="circle-background"></div>
-                <div class="image-frame">
-                  <img src="images/Owner.webp" alt="Marci Metzger" class="marci-image">
-                </div>
-                <div class="floating-elements">
-                  <div class="floating-element element-1"></div>
-                  <div class="floating-element element-2"></div>
-                  <div class="floating-element element-3"></div>
                 </div>
               </div>
             </div>
@@ -179,7 +197,6 @@
             <div class="section-header" data-aos="fade-up">
               <h2 class="section-title">GET IT SOLD</h2>
               <div class="section-divider"></div>
-              <p class="section-subtitle">Top Residential Sales Last 5 Years</p>
             </div>
           </div>
         </div>
@@ -188,6 +205,7 @@
         <div class="row align-items-center mb-5">
           <div class="col-lg-6">
             <div class="sales-stats-content" data-aos="fade-right">
+              <h3 class="stats-title">Top Residential Sales Last 5 Years</h3>
               <div class="stats-highlight">
                 <span class="highlight-number">90</span>
                 <span class="highlight-text">clients in 2021</span>
@@ -228,20 +246,6 @@
                 We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, 
                 getting you top dollar for your home.
               </p>
-              <div class="listing-features">
-                <div class="feature-item">
-                  <span class="feature-icon">🎯</span>
-                  <span class="feature-text">Maximum Exposure</span>
-                </div>
-                <div class="feature-item">
-                  <span class="feature-icon">💰</span>
-                  <span class="feature-text">Top Dollar Sales</span>
-                </div>
-                <div class="feature-item">
-                  <span class="feature-icon">📱</span>
-                  <span class="feature-text">Digital Marketing</span>
-                </div>
-              </div>
             </div>
           </div>
           <div class="col-lg-6 order-lg-1">
@@ -268,35 +272,6 @@
               <p class="buyers-description">
                 Enjoy having a pro at your service. Market analysis, upgrades lists, contractors on speed dial, & more!
               </p>
-              <div class="buyers-services">
-                <div class="service-item">
-                  <div class="service-icon">
-                    <span class="icon">📊</span>
-                  </div>
-                  <div class="service-content">
-                    <h5 class="service-title">Market Analysis</h5>
-                    <p class="service-description">Comprehensive market insights</p>
-                  </div>
-                </div>
-                <div class="service-item">
-                  <div class="service-icon">
-                    <span class="icon">🔧</span>
-                  </div>
-                  <div class="service-content">
-                    <h5 class="service-title">Upgrades Lists</h5>
-                    <p class="service-description">Strategic improvement recommendations</p>
-                  </div>
-                </div>
-                <div class="service-item">
-                  <div class="service-icon">
-                    <span class="icon">👷</span>
-                  </div>
-                  <div class="service-content">
-                    <h5 class="service-title">Contractors</h5>
-                    <p class="service-description">Trusted professionals on speed dial</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <div class="col-lg-6">
@@ -316,62 +291,540 @@
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-5">
-                <h2 class="footer-heading mb-4">About Stated</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
-              </div>
-              <div class="col-md-3 ml-auto">
-                <h2 class="footer-heading mb-4">Quick Links</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              
-            </div>
+    <!-- FIND YOUR DREAM HOME Section -->
+    <section class="dream-home-section" id="properties-section">
+      <div class="dream-home-container">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="dream-home-header">
+            <h2 class="dream-home-title">Find Your Dream Home</h2>
+            <p class="dream-home-subtitle">Discover Your Perfect Property</p>
+            <p class="dream-home-description">
+              Search through our extensive collection of premium properties and find the home that matches your lifestyle and budget.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="mb-4">
-              <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post" class="footer-subscribe">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+
+          <!-- Search Form -->
+          <div class="search-form-container">
+            <div class="search-form-header">
+              <h3 class="search-form-title">Search Listings</h3>
+              <p class="search-form-subtitle">Filter properties by your preferences</p>
+            </div>
+
+            <form class="dream-home-form" id="property-search-form">
+              <!-- Location -->
+              <div class="form-group">
+                <label for="location" class="form-label">Location</label>
+                <select id="location" name="location" class="form-control" required>
+                  <option value="">Select Location</option>
+                  <option value="downtown">Downtown</option>
+                  <option value="suburbs">Suburbs</option>
+                  <option value="waterfront">Waterfront</option>
+                  <option value="mountains">Mountains</option>
+                  <option value="countryside">Countryside</option>
+                </select>
+              </div>
+
+              <!-- Type -->
+              <div class="form-group">
+                <label for="type" class="form-label">Type</label>
+                <select id="type" name="type" class="form-control" required>
+                  <option value="">Select Type</option>
+                  <option value="house">House</option>
+                  <option value="condo">Condo</option>
+                  <option value="townhouse">Townhouse</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="land">Land</option>
+                </select>
+              </div>
+
+              <!-- Sort By -->
+              <div class="form-group">
+                <label for="sort" class="form-label">Sort By</label>
+                <select id="sort" name="sort" class="form-control">
+                  <option value="price-low">Newest</option>
+                  <option value="price-high">Oldest</option>
+                  <option value="newest">Least Expensive to Most</option>
+                  <option value="oldest">Most Expensive to Least</option>
+                  <option value="size">Bedrooms (Low to High)</option>
+                  <option value="size">Bedrooms (High to Low)</option>
+                  <option value="size">Bathrooms (Low to High)</option>
+                  <option value="size">Bathrooms (High to Low)</option>
+                </select>
+              </div>
+
+              <!-- Bedrooms -->
+              <div class="form-group half">
+                <label for="bedrooms" class="form-label">Bedrooms</label>
+                <select id="bedrooms" name="bedrooms" class="form-control">
+                  <option value="">Any Number</option>
+                  <option value="1">1+</option>
+                  <option value="2">2+</option>
+                  <option value="3">3+</option>
+                  <option value="4">4+</option>
+                  <option value="5">5+</option>
+                  <option value="6">6+</option>
+                </select>
+              </div>
+
+              <!-- Baths -->
+              <div class="form-group half">
+                <label for="baths" class="form-label">Baths</label>
+                <select id="baths" name="baths" class="form-control">
+                  <option value="">Any Number</option>
+                  <option value="1">1+</option>
+                  <option value="2">2+</option>
+                  <option value="3">3+</option>
+                  <option value="4">4+</option>
+                  <option value="5">5+</option>
+                  <option value="6">6+</option>
+                </select>
+              </div>
+
+              <!-- Price Range -->
+              <div class="form-group price-range-container">
+                <div>
+                  <label for="min-price" class="form-label">Min Price</label>
+                  <input type="number" id="min-price" name="min_price" class="form-control" placeholder="Min Price" min="0">
+                </div>
+                <div>
+                  <label for="max-price" class="form-label">Max Price</label>
+                  <input type="number" id="max-price" name="max_price" class="form-control" placeholder="Max Price" min="0">
                 </div>
               </div>
-            </form>  
-            </div>
-            
-            <div class="">
-              <h2 class="footer-heading mb-4">Follow Us</h2>
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-            </div>
 
-
+              <!-- Search Button -->
+              <div class="search-button-container">
+                <button type="submit" class="search-btn">
+                  Search Now
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-            <p>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+          <div class="floating-element element-1"></div>
+          <div class="floating-element element-2"></div>
+          <div class="floating-element element-3"></div>
+          <div class="floating-element element-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORTING PARTNERS Section -->
+    <section class="partners-section" id="partners-section">
+      <div class="partners-container">
+        <div class="container">
+          
+
+          <!-- Partners Grid -->
+          <div class="partners-grid">
+            <div class="partner-logo">
+              <img src="images/icon1.webp" alt="Partner 1" loading="lazy">
+            </div>
+            <div class="partner-logo">
+              <img src="images/icon2.webp" alt="Partner 2" loading="lazy">
+            </div>
+            <div class="partner-logo">
+              <img src="images/icon3.webp" alt="Partner 3" loading="lazy">
+            </div>
+            <div class="partner-logo">
+              <img src="images/icon4.webp" alt="Partner 4" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Mobile Carousel (Hidden by default, shown on mobile) -->
+          <div class="partners-carousel">
+            <div class="partners-track">
+              <div class="partner-logo">
+                <img src="images/icon1.webp" alt="Partner 1" loading="lazy">
+              </div>
+              <div class="partner-logo">
+                <img src="images/icon2.webp" alt="Partner 2" loading="lazy">
+              </div>
+              <div class="partner-logo">
+                <img src="images/icon3.webp" alt="Partner 3" loading="lazy">
+              </div>
+              <div class="partner-logo">
+                <img src="images/icon4.webp" alt="Partner 4" loading="lazy">
+              </div>
+              <!-- Duplicate for seamless loop -->
+              <div class="partner-logo">
+                <img src="images/icon1.webp" alt="Partner 1" loading="lazy">
+              </div>
+              <div class="partner-logo">
+                <img src="images/icon2.webp" alt="Partner 2" loading="lazy">
+              </div>
+              <div class="partner-logo">
+                <img src="images/icon3.webp" alt="Partner 3" loading="lazy">
+              </div>
+              <div class="partner-logo">
+                <img src="images/icon4.webp" alt="Partner 4" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY Section -->
+    <section class="gallery-section" id="gallery-section">
+      <div class="gallery-container">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="gallery-header">
+            <h2 class="gallery-title">Photo Gallery</h2>
+            <p class="gallery-subtitle">Our Work in Pictures</p>
+            <p class="gallery-description">
+              Explore our portfolio of successful real estate projects and beautiful properties that showcase our expertise and attention to detail.
+            </p>
+          </div>
+
+          <!-- Gallery Carousel -->
+          <div class="gallery-carousel">
+            <!-- Preview images will be dynamically inserted by JavaScript -->
+            <button class="gallery-nav gallery-prev" aria-label="Previous image"></button>
+            <div class="gallery-slide">
+              <img src="images/pic1.webp" alt="Beautiful Modern Home" class="gallery-image" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <h3 class="gallery-item-title">Modern Residence</h3>
+                  <p class="gallery-item-subtitle">Contemporary Design</p>
+                </div>
+              </div>
+            </div>
+            <button class="gallery-nav gallery-next" aria-label="Next image"></button>
+          </div>
+          
+          <div class="gallery-dots"></div>
+          
+          <div class="gallery-controls">
+            <button class="gallery-play-btn">Pause</button>
+          </div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="gallery-floating">
+          <div class="floating-element element-1"></div>
+          <div class="floating-element element-2"></div>
+          <div class="floating-element element-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES Section -->
+    <section class="services-section py-5" id="services-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="section-header" data-aos="fade-up">
+              <h2 class="section-title">Our Services</h2>
+              <div class="section-divider"></div>
+              <p class="section-subtitle">Real Estate Done Right</p>
+              <p class="section-description">
+                Nervous about your property adventure? Don't be. Whether you're getting ready to buy or sell your residence, 
+                looking at investment properties, or just curious about the markets, our team ensures you get the best experience possible!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="row">
+          <!-- Service 1: Commercial & Residential -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-image-container">
+                <img src="images/service1.webp" alt="Commercial & Residential" class="service-image">
+                <div class="service-overlay">
+                  <div class="service-icon">🏢</div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Commercial & Residential</h3>
+                <p class="service-description">
+                  Large or small, condo or mansion, we can find it and get at the price that's right. 
+                  Fixer-uppers? Luxury? We can help with all of it! We live, work, and play in this community. 
+                  Happy to help you find where to put you hard-earned dollars.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2: Rely on Expertise -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-image-container">
+                <img src="images/service2.webp" alt="Rely on Expertise" class="service-image">
+                <div class="service-overlay">
+                  <div class="service-icon">🎯</div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Rely on Expertise</h3>
+                <p class="service-description">
+                  If you have questions about affordability, credit, and loan options, trust us to connect you 
+                  with the right people to get the answers you need in a timely fashion. We make sure you feel 
+                  confident and educated every step of the way.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3: Real Estate Done Right -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-image-container">
+                <img src="images/service3.webp" alt="Real Estate Done Right" class="service-image">
+                <div class="service-overlay">
+                  <div class="service-icon">⭐</div>
+                </div>
+              </div>
+              <div class="service-content">
+                <h3 class="service-title">Real Estate Done Right</h3>
+                <p class="service-description">
+                  Nervous about your property adventure? Don't be. Whether you're getting ready to buy or sell 
+                  your residence, looking at investment properties, or just curious about the markets, our team 
+                  ensures you get the best experience possible!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOLLOW US Section -->
+    <section class="follow-us-section py-4" id="follow-us-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <div class="follow-us-content" data-aos="fade-up">
+              <!-- Social Media Icons -->
+              <div class="social-icons-container">
+                <a href="#" class="social-icon facebook" aria-label="Follow us on Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon instagram" aria-label="Follow us on Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon linkedin" aria-label="Connect with us on LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon yelp" aria-label="Find us on Yelp">
+                  <i class="fab fa-yelp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL OR VISIT Section -->
+    <section class="contact-section py-5" id="contact-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="section-header" data-aos="fade-up">
+              <h2 class="section-title">Call or Visit</h2>
+              <div class="section-divider"></div>
+              <p class="section-subtitle">Get in Touch Today</p>
+              <p class="section-description">
+                Ready to start your real estate journey? Contact us directly or visit our office. 
+                We're here to help you every step of the way.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Contact Form -->
+          <div class="col-lg-6 mb-4">
+            <div class="contact-form-container" data-aos="fade-right">
+              <h3 class="contact-form-title">Send Message</h3>
+              <p class="contact-form-subtitle">Get in touch with us today</p>
+              
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Name *</label>
+                  <input type="text" id="contact-name" name="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email *</label>
+                  <input type="email" id="contact-email" name="email" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message *</label>
+                  <textarea id="contact-message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                
+                <!-- reCAPTCHA - Disabled for development -->
+                <!-- <div class="form-group recaptcha-container">
+                  <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div>
+                </div> -->
+                
+                <div class="form-group">
+                  <button type="submit" class="contact-submit-btn">
+
+                    Send Message
+                  </button>
+                </div>
+                
+                <div class="recaptcha-notice">
+                  <small>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.</small>
+                </div>
+              </form>
             </div>
           </div>
           
+          <!-- Business Information -->
+          <div class="col-lg-6">
+            <div class="business-info-container" data-aos="fade-left">
+              <div class="business-card">
+                <div class="business-header">
+                  <h3 class="business-name">Marci Metzger</h3>
+                  <p class="business-company">THE RIDGE REALTY GROUP</p>
+                </div>
+                
+                <div class="business-details">
+                  <div class="business-address">
+                    <div class="detail-icon">📍</div>
+                    <div class="detail-content">
+                      <strong>Address:</strong><br>
+                      3190 HW-160, Suite F<br>
+                      Pahrump, Nevada 89048, United States
+                    </div>
+                  </div>
+                  
+                  <div class="business-phone">
+                    <div class="detail-icon">📞</div>
+                    <div class="detail-content">
+                      <strong>Phone:</strong><br>
+                      (206) 919-6886
+                    </div>
+                  </div>
+                  
+                  <div class="business-hours">
+                    <div class="detail-icon">🕒</div>
+                    <div class="detail-content">
+                      <strong>Office Hours</strong><br>
+                      <div class="hours-row">
+                        <span class="hours-status">Open today</span>
+                        <span class="hours-daily">Open daily</span>
+                      </div>
+                      <div class="hours-row">
+                        <span class="hours-time">08:00 am – 07:00 pm</span>
+                        <span class="hours-daily">8:00 am - 7:00 pm</span>
+                      </div>
+                      
+                      <!-- Dropdown button for weekly schedule -->
+                      <button class="hours-dropdown-btn" id="hoursDropdownBtn">
+                        <span class="dropdown-text">View Weekly Schedule</span>
+                        <span class="dropdown-arrow">▼</span>
+                      </button>
+                      
+                      <!-- Weekly schedule dropdown -->
+                      <div class="hours-dropdown-content" id="hoursDropdown">
+                        <div class="weekly-schedule" id="weeklySchedule">
+                          <!-- Schedule will be populated by JavaScript -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="business-note">
+                    <p><em>Appointments outside office hours available upon request. Just call!</em></p>
+                  </div>
+                  
+                  <!-- WhatsApp Button at Bottom -->
+                  <div class="whatsapp-cta-bottom">
+                    <a href="https://wa.me/12069196886" class="whatsapp-btn" target="_blank">
+                      <i class="fab fa-whatsapp"></i>
+                      Message on WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION MAP Section -->
+    <section class="map-section py-5" id="map-section">
+      <div class="container">
+
+        <!-- Map Container -->
+        <div class="row">
+          <div class="col-12">
+            <div class="map-container" data-aos="fade-up">
+              <div id="map" class="google-map">
+                <!-- Google Map will be loaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav lightbox-next" aria-label="Next image">›</button>
+        <img src="" alt="" class="lightbox-image">
+        <div class="lightbox-info">
+          <h3 class="lightbox-title"></h3>
+          <p class="lightbox-counter"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://yelp.com" target="_blank" class="social-icon">
+              <i class="fab fa-yelp"></i>
+            </a>
+          </div>
+          
+          <!-- Copyright -->
+          <div class="copyright">
+            COPYRIGHT © 2023 MARCI METZGER HOMES - ALL RIGHTS RESERVED
+          </div>
+          
+          <!-- Separator Line -->
+          <div class="separator"></div>
+          
+          <!-- Powered By -->
+          <div class="powered-by">
+            <div class="powered-text">POWERED BY</div>
+            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="vercel-link">
+              <img src="images/vercel.svg" alt="Vercel" class="vercel-logo">
+            </a>
+          </div>
         </div>
       </div>
     </footer>
@@ -394,6 +847,82 @@
 
   
   <script src="js/main.js"></script>
+  <script src="js/dream-home.js"></script>
+  <script src="js/partners.js"></script>
+  <script src="js/gallery.js"></script>
+  
+  <!-- reCAPTCHA - Disabled for development -->
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <!-- Map Script -->
+  <script>
+    function initMap() {
+      // Office location coordinates for Pahrump, NV
+      const officeLocation = [36.2083, -115.9839];
+      
+      // Create map centered on office location
+      const map = L.map('map').setView(officeLocation, 15);
+      
+      // Add OpenStreetMap tiles (completely free)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      
+      // Create custom marker icon
+      const customIcon = L.divIcon({
+        html: `
+          <div style="
+            width: 20px;
+            height: 20px;
+            background: #e74c3c;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+          "></div>
+        `,
+        className: 'custom-marker',
+        iconSize: [20, 20],
+        iconAnchor: [10, 10]
+      });
+      
+      // Add marker
+      const marker = L.marker(officeLocation, { icon: customIcon }).addTo(map);
+      
+      // Create popup content
+      const popupContent = `
+        <div style="padding: 10px; max-width: 250px;">
+          <h3 style="margin: 0 0 10px 0; color: #2c3e50; font-size: 16px;">The Ridge Realty Group</h3>
+          <p style="margin: 0 0 8px 0; color: #7f8c8d; font-size: 14px;">Marci Metzger, Realtor</p>
+          <p style="margin: 0 0 8px 0; color: #34495e; font-size: 13px;">
+            <strong>📍 Address:</strong><br>
+            3190 HW-160, Suite F<br>
+            Pahrump, Nevada 89048
+          </p>
+          <p style="margin: 0 0 8px 0; color: #34495e; font-size: 13px;">
+            <strong>📞 Phone:</strong> (206) 919-6886
+          </p>
+          <p style="margin: 0; color: #34495e; font-size: 13px;">
+            <strong>🕒 Hours:</strong> Daily 8:00 AM - 7:00 PM
+          </p>
+        </div>
+      `;
+      
+      // Bind popup to marker
+      marker.bindPopup(popupContent).openPopup();
+    }
+    
+    // Initialize map when page loads
+    document.addEventListener('DOMContentLoaded', initMap);
+  </script>
     
   </body>
 </html>
