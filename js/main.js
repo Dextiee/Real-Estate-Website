@@ -251,8 +251,29 @@ jQuery(document).ready(function($) {
    	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
       e.preventDefault();
 
-      // Prevent disabled nav items from doing anything
+      // Handle disabled nav items with visual feedback
       if ($(this).hasClass('nav-disabled')) {
+        var $this = $(this);
+        
+        // Add visual feedback
+        $this.addClass('nav-clicked');
+        
+        // Create a temporary tooltip or message
+        var originalText = $this.text();
+        $this.text('Coming Soon!');
+        
+        // Remove feedback after 2 seconds
+        setTimeout(function() {
+          $this.removeClass('nav-clicked');
+          $this.text(originalText);
+        }, 2000);
+        
+        // Add a subtle shake animation
+        $this.parent().addClass('nav-shake');
+        setTimeout(function() {
+          $this.parent().removeClass('nav-shake');
+        }, 500);
+        
         return false;
       }
 
